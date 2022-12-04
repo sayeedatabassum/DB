@@ -62,6 +62,15 @@ cur.close()
 con.commit()
 con.close()
 
+:Wq
+cp connect.py insert.py;
+vi insert.py;
+python3 insert.py;
+
+mysql -u user1 -p;
+select * from Employee;
+exit
+
 
 
 
