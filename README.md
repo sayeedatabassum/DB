@@ -43,6 +43,25 @@ shows that python script date and time
 >>python3 connect.py
 Connection Establised Successfully!
 
+Insert
+
+>>use Employee;
+>>show tables;
+>>DESC Employee;
+>>exit
+>>>>vi connect.py
+>>press i
+>>
+import mysql.connector as mariadb
+con=mariadb.connect(host='localhost',user='user1',password='abc@123',database='Employee')
+print("Connection Established Successfully!")
+cur=con.cursor()
+cur.execute("insert into Employee values(1007,'Rita','Developer',1001,'2021-90-30',50000,20)")
+print("Data Added Successfully!")
+cur.close()
+con.commit()
+con.close()
+
 
 
 
